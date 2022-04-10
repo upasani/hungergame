@@ -39,6 +39,15 @@ function App() {
 
   }, [star, sort, card, page]);
   console.log(hotel);
+  const sorting=(val)=>{
+    // alert(val);
+    console.log("In the sorting function",hotel);
+    hotel.sort((a,b)=>{
+      return  b.cost.cost_one-a.cost.cost_two;
+    })
+    setSort(hotel);
+    // console.log(hotel);
+  }
 
   return (
     <div className="App">
@@ -56,10 +65,9 @@ function App() {
         4 star
       </button>
       <div>
-        <button
-          onClick={() => setSort()}>Ascending</button>
+        <button onClick={()=>sorting('asc')}>Ascending</button>
 
-        <button onClick={() => setSort()}>Descending</button>
+        <button onClick={() => sorting('desc')}>Descending</button>
       </div>
       <div>
         <button onClick={() => setCard('card')}>Card</button>
