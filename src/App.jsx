@@ -20,7 +20,6 @@ function App() {
       method: "GET",
       params: {
         star,
-        sort,
         card,
         page
 
@@ -39,18 +38,18 @@ function App() {
 
   }, [star, card, page]);
   console.log(hotel);
-  const sorting=(val)=>{
-    if(val=='asc'){
-      hotel.sort((a,b)=>{
-        return  b.cost.cost_one-a.cost.cost_one
+  const sorting = (val) => {
+    if (val =='asc') {
+      hotel.sort((a, b) => {
+        return b.cost.cost_one - a.cost.cost_one
       })
     }
-    if(val=='desc'){
-      hotel.sort((a,b)=>{
-        return b.cost.cost_one-a.cost.cost_one
+    if (val == 'desc') {
+      hotel.sort((a, b) => {
+        return b.cost.cost_one - a.cost.cost_one
       })
     }
-    console.log("After sorting the element is",hotel);
+    console.log("After sorting the element is", hotel);
     setSort(hotel);
 
   }
@@ -71,7 +70,7 @@ function App() {
         4 star
       </button>
       <div>
-        <button onClick={()=>sorting('asc')}>Ascending</button>
+        <button onClick={() => sorting('asc')}>Ascending</button>
 
         <button onClick={() => sorting('desc')}>Descending</button>
       </div>
