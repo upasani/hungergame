@@ -9,7 +9,7 @@ export const RestaurantDetails = ({ obj }) => {
                 <h4>{obj.title}</h4>
                 <h4>cost {obj.cost.cost_one} for one</h4>
                 <h4>cost {obj.cost.cost_two} for two</h4>
-                <h4>Accept{obj.payment_methods.card==true}</h4>
+                <h4>Accept{obj.payment_methods.card}</h4>
             </div>
             <div>
                 <p>Star:{obj.star}</p>

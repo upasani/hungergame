@@ -1,9 +1,9 @@
-import logo from './logo.svg';
+
 import './App.css';
 import { RestaurantDetails } from './Component/RestaurantDetails'
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Hello } from './Component/Hello';
+
 function App() {
 
 
@@ -49,7 +49,7 @@ function App() {
         return b.cost.cost_one - a.cost.cost_one
       })
     }
-    console.log("After sorting the element is", hotel);
+    // console.log("After sorting the element is", hotel);
     setSort(hotel);
 
   }
@@ -82,7 +82,7 @@ function App() {
 
 
       {hotel.map((e) => (
-        <RestaurantDetails obj={e} />
+        <RestaurantDetails obj={e} key={e._id} />
 
       ))}
       <button onClick={() => setPage(page + 1)}>Next</button>
