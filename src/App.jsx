@@ -37,16 +37,22 @@ function App() {
   useEffect(() => {
     getData();
 
-  }, [star, sort, card, page]);
+  }, [star, card, page]);
   console.log(hotel);
   const sorting=(val)=>{
-    // alert(val);
-    console.log("In the sorting function",hotel);
-    hotel.sort((a,b)=>{
-      return  b.cost.cost_one-a.cost.cost_two;
-    })
+    if(val=='asc'){
+      hotel.sort((a,b)=>{
+        return  b.cost.cost_one-a.cost.cost_one
+      })
+    }
+    if(val=='desc'){
+      hotel.sort((a,b)=>{
+        return b.cost.cost_one-a.cost.cost_one
+      })
+    }
+    console.log("After sorting the element is",hotel);
     setSort(hotel);
-    // console.log(hotel);
+
   }
 
   return (
