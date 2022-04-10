@@ -1,0 +1,18 @@
+.flex{
+    display: flex;
+}
+img{
+    width: 35%;
+}
+#main_div{
+    border: 1px solid black;
+    width: 50%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+#main_div>div{
+    /* border: 2px solid red; */
+    margin: 10px;
+    margin-left: 50px;
+}
